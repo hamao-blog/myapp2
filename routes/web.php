@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', 'WelcomeController@index');
+Route::resource('players', 'PlayerController');
+Route::resource('countries', 'CountryController');
+Route::resource('goals', 'GoalController');
+Route::resource('pairings','PairingController');
+   
