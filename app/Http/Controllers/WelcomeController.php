@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Player;
+use App\Models\TotalGoal;
 use Throwable;
+use Log;
 
 class WelcomeController extends Controller
 {
@@ -21,12 +23,16 @@ class WelcomeController extends Controller
         try{
         
             //
-            $players = Player::getWithContoryBySimplePaginate(selt::PAGINATE_LIMIT);
+            $players = Player::getWithContoryBySimplePaginate(self::PAGINATE_LIMIT);
             return view('welcome')->with('players',$players);
         }catch(Throwable $e){
+            Log::debug($e->getMessage());
             abort(500);
         }
-        }
-        
     }
+}
+
+        
+        
+    
 
