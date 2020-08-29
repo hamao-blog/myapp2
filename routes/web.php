@@ -24,4 +24,4 @@ Route::resource('players', 'PlayerController');
 Route::resource('countries', 'CountryController');
 Route::resource('goals', 'GoalController');
 Route::resource('pairings','PairingController');
-   
+Route::resource('total_goals','TotalGoalsController');

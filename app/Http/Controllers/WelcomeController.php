@@ -21,7 +21,7 @@ class WelcomeController extends Controller
     public function index()
     {
         try{
-        
+            
             //
             $players = Player::getWithContoryBySimplePaginate(self::PAGINATE_LIMIT);
             return view('welcome')->with('players',$players);

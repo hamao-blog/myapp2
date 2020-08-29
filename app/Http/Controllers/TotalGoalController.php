@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TotalGoal;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TotalGoalController extends Controller
 {
@@ -15,6 +16,7 @@ class TotalGoalController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
